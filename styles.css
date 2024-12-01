@@ -1,0 +1,560 @@
+:root 
+{
+    --ada-blue: #336178;
+    --ada-red: #ae485e;
+}
+
+body 
+{
+    background-color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Getting rid of the horizontal overflow */
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+body {
+    padding-top: 40px;  /* Adjust according to the height of your navbar */
+}
+
+.navbar ul {
+    position: fixed;   /* Fix navbar to the top */
+    top: 0;            /* Align it to the top */
+    left: 0;           /* Align it to the left */
+    width: 100%;       /* Full width of the screen */
+    list-style-type: none;
+    background-color: var(--ada-blue);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10;       /* Ensure it's above other content */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 30px;  /* Add padding for clickable area */
+    display: block;
+    text-align: center;
+    font-size: 1.1em;   /* Increase font size */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition */
+}
+
+.navbar a:hover {
+    background-color: rgb(201, 58, 58); /* Change on hover */
+    border-radius: 0.2cm;
+    z-index: 20;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    transform: scale(1.05);  /* Slight scaling on hover */
+}
+
+
+.navbar li
+{
+    float: left;
+}
+
+.teamName
+{
+    position: absolute;
+    left: 1420px;
+    bottom: 658px;
+    font-size: 18px;
+    color: white;
+}
+
+.teamName::after
+{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(201, 58, 58);
+    transition: 0.8s ease-in-out;
+}
+
+.teamName:hover::after {
+    width: 100%;
+}
+
+header 
+{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: left center;
+}
+
+#ada-logo
+{
+    position: absolute;
+    width: 80px;
+    left: 718px;
+    top: 570px;
+}
+
+#home-team-photo
+{
+    position: relative;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    border-radius: 0.2cm;
+    width: 300px;
+    height: 200px;
+    left: 100px;
+}
+
+#home-page-1
+{
+    position: relative;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    border-radius: 0.2cm;
+    width: 300px;
+    height: 200px;
+    left: 135px;
+}
+
+#home-page-2
+{
+    position: relative;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    border-radius: 0.2cm;
+    width: 300px;
+    height: 200px;
+    left: 170px;
+}
+
+#home-page-3
+{
+    position: relative;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    border-radius: 0.2cm;
+    width: 300px;
+    height: 200px;
+    left: 205px;
+}
+
+#team-logo
+{
+    position: absolute;
+    bottom: 370px;
+    left: 20px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+
+#ada-logo-colour
+{
+    position: absolute;
+    width: 240px;
+    height: 200px;
+    left: 1250px;
+    bottom: 400px;
+}
+
+.cta-section
+{
+    position: absolute;
+    width: 100%;
+    top: 2150px;
+}
+
+/* Home page ends here */
+/* Hour Of Code page starts here */
+
+#hoc-background-image
+{
+    position: absolute;
+    border-radius: 0.2cm;
+    left: 20px;
+    top: 75px;
+    width: 650px;
+    height: 380px;
+}
+
+#teamPhoto
+{
+    position: absolute;
+    width: 650px;
+    height: 460px;
+    border-radius: 0.2cm;
+    top: 465px;
+}
+
+.images 
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between the two images */
+    top: 30px;
+}
+
+.images img 
+{
+    width: 420px; /* Adjust size of images */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(20px,49px);  
+    border-radius: 0.2cm;
+}
+
+.hoc-textbox
+{
+    position: absolute;
+    width: 1060px;
+    height: 2658px;
+    background-color: var(--ada-red);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 27px;
+    color: #fff;
+    border-radius: 0.2cm;
+    left: 450px;
+    top: 80px;
+}
+
+.hoc-paragraph
+{
+    padding: 0px 30px 0px 30px;
+}
+
+/* Hour Of Code page ends here */
+/* About Us page starts here */
+
+.container 
+{
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 14px 8px rgba(0, 0, 0, 0);
+}
+
+.team 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member 
+{
+    margin: 15px;
+    text-align: center;
+    max-width: 200px;
+}
+
+.team-member img 
+{
+    margin-top: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+.team-member h3 
+{
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.team-member p 
+{
+    font-size: 0.9em;
+    color: #666;
+}
+
+.natig-info
+{
+    position: absolute;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    color: #fff;
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+    background: var(--ada-red);
+    border-radius: 0px 0px 60px 60px;
+    top: 450px;
+    left: 100px;
+}
+
+.masud-info
+{
+    position: absolute;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    color: #fff;
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+    background: var(--ada-red);
+    border-radius: 0px 0px 60px 60px;
+    top: 450px;
+    left: 445px;
+}
+
+.fidan-info
+{
+    position: absolute;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    color: #fff;
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+    background: var(--ada-red);
+    border-radius: 0px 0px 60px 60px;
+    top: 450px;
+    left: 790px;
+}
+
+.maharram-info
+{
+    position: absolute;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    color: #fff;
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+    background: var(--ada-red);
+    border-radius: 0px 0px 60px 60px;
+    top: 450px;
+    left: 1135px;
+}
+
+.last-cta-section
+{
+    position: absolute;
+    width: 100%;
+    top: 500px;
+}
+
+.logo-section {
+    width: 100%;
+    background-color: #f9f9f9; /* Light background to highlight logo */
+    text-align: center;
+    padding: 40px 0;
+}
+.logo-section img {
+    max-width: 100%; /* Ensure logo scales properly */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Prevent it from getting too tall */
+}
+
+/* About Us page ends here */
+/* Web Project design starts here */
+
+.cta-section-wp
+{
+    position: absolute;
+    width: 100%;
+}
+
+.project-overview {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--ada-blue);
+    color: white;
+    border-radius: 0.5cm;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--ada-red);
+}
+
+.intro-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.codecademy-profiles {
+    margin: 30px auto;
+    max-width: 1000px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0.5cm;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 2em;
+    color: var(--ada-red);
+    margin-bottom: 20px;
+}
+
+.profile-list {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-list li {
+    margin: 10px 0;
+}
+
+.profile-list a {
+    font-size: 1.2em;
+    color: var(--ada-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-list a:hover {
+    color: var(--ada-red);
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--ada-blue);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer a {
+    color: var(--ada-red);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.feedback-form {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0.5cm;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback-form label {
+    font-size: 1.1em;
+    color: var(--ada-blue);
+}
+
+.feedback-form input, 
+.feedback-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.3cm;
+}
+
+.feedback-form button {
+    padding: 10px 20px;
+    background-color: var(--ada-blue);
+    color: white;
+    border: none;
+    border-radius: 0.3cm;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: var(--ada-red);
+}
+
+#formResponse {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: var(--ada-red);
+}
+
+/* Add fade-in animation for the project overview section */
+.project-overview {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Smooth transition for button hover effects */
+button, .navbar a {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: var(--ada-red);
+    transform: scale(1.0);
+}
+
+/* Navbar link hover effect */
+.navbar a:hover {
+    background-color: rgb(201, 58, 58);
+    transform: scale(1.0);
+}
+
+/* Add bounce effect to the header */
+header {
+    animation: bounceInPlace 1s ease-in-out;
+}
+
+@keyframes bounceInPlace {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

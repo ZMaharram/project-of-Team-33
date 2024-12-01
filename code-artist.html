@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)2024 by Masud Eyubov, Natig Mammadov, Maharram Zeynalov, Fidan Akhundlu 
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Recursive Fractal Tree</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #1e1e30, #28293e);
+        overflow: hidden;
+      }
+
+      .tree-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .branch {
+        position: absolute;
+        bottom: 0;
+        width: 2px;
+        background-color: #6caf50;
+        transform-origin: bottom center;
+        animation: grow 1s ease-out forwards;
+      }
+
+      @keyframes grow {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+            <li><a href="index.html"><b>Home</b></a></li>                  <!-- Home Page -->
+        </ul>
+      </nav>    
+    </header>
+    <div class="tree-container"></div>
+
+    <script>
+      const container = document.querySelector('.tree-container');
+
+      // Recursive function to draw the tree
+      function drawBranch(x, y, length, angle, depth, maxDepth) {
+        if (depth > maxDepth) return;
+
+        // Create a branch
+        const branch = document.createElement('div');
+        branch.classList.add('branch');
+        branch.style.height = `${length}px`;
+        branch.style.left = `${x}px`;
+        branch.style.bottom = `${y}px`;
+        branch.style.transform = `rotate(${angle}deg)`;
+
+        container.appendChild(branch);
+
+        // Compute new branch positions
+        const newX = x + length * Math.sin((angle * Math.PI) / 180);
+        const newY = y + length * Math.cos((angle * Math.PI) / 180);
+
+        // Recursive calls with a delay for dynamic growth
+        setTimeout(() => {
+          drawBranch(newX, newY, length * 0.7, angle - 30, depth + 1, maxDepth);
+          drawBranch(newX, newY, length * 0.7, angle + 30, depth + 1, maxDepth);
+        }, 500);
+      }
+
+      // Initial call to start the tree (you can add more branches if you want by changing 6 to any number )
+      drawBranch(window.innerWidth / 2, 0, 100, 0, 0, 7);
+    </script>
+  </body>
+</html>
+

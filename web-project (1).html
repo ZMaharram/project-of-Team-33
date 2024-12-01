@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)2024 by Masud Eyubov, Natig Mammadov, Maharram Zeynalov, Fidan Akhundlu 
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Homework 3: Website project</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html"><b>Home</b></a></li>             <!-- Home Page -->
+                    <li><a href="code-artist.html"><b>Code Artistry</b></a></li>   <!-- Page about code artistry -->
+                    <li><a href="hour-of-code.html"><b>Hour Of Code</b></a></li>   <!-- Page about the Hour of Code -->
+                    <li><a href="web-project.html"><b>Web Project</b></a></li>     <!-- Page showcasing the web project -->
+                    <li><a href="team-members.html"><b>About Us</b></a></li>       <!-- Page introducing team members -->
+                </ul>
+                <h4 class="teamName"><b>Team 33</b></h4>
+            </nav>
+        </header>
+        <main>
+            <section class="project-overview">
+                <h1 class="page-title">Welcome to Our Website Project</h1>
+                <p class="intro-text">
+                    Our team, <strong>Team 33</strong>, proudly presents our collaborative website project. This project is designed using
+                    <strong>HTML, CSS, and JavaScript</strong>, showcasing our dedication to teamwork and creativity.
+                </p>
+                <p class="intro-text">
+                    This page provides an insight into the project's objectives, our technical approach, and links to individual Codecademy profiles.
+                </p>
+            </section>     
+            <section class="codecademy-profiles">
+                <h2 class="section-title">Team Codecademy Profiles</h2>
+                <p>Click on the links below to view the progress of our team members on Codecademy:</p>
+                <ul class="profile-list">
+                    <!-- Placeholder for actual links -->
+                    <li><a href="https://www.codecademy.com/profiles/MasudEyubov" target="_blank">Masud Eyubov's Profile</a></li>
+                    <li><a href="https://www.codecademy.com/profiles/nmammadov20549" target="_blank">Natig Mammadov's Profile</a></li>
+                    <li><a href="https://www.codecademy.com/profiles/MaharramZeynalov" target="_blank">Maharram Zeynalov's Profile</a></li>
+                    <li><a href="https://www.codecademy.com/profiles/fakhundlu23139" target="_blank">Fidan Akhundlu's Profile</a></li>
+                </ul>
+            </section>
+            <section class="feedback-form">
+                <h2 class="section-title">We Value Your Feedback</h2>
+                <p>Please share your thoughts or suggestions below:</p>
+                <form id="feedbackForm">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="message">Your Feedback:</label>
+                    <textarea id="message" name="message" required></textarea>
+            
+                    <button type="submit">Submit Feedback</button>
+                </form>
+                <p id="formResponse"></p>
+            </section>
+        </main>
+        <footer>
+            <section class="cta-section-wp" style="text-align: center; padding: 40px 20px; background-color: #336178; color: white;">
+                <h2>Get Involved With Our Team</h2>
+                <p>Want to learn more or contribute to our projects? We’d love to collaborate with you!</p>
+                <button onclick="location.href='contact.html'" style="padding: 15px 30px; background-color: rgb(201, 58, 58); border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em;">
+                    Contact Us
+                </button>
+                <div class="footer-content">
+                    <p>&copy; 2024 Team 33. All rights reserved.</p>
+                    <p>Created as part of the <strong>SITE 1101: Principles of Information Systems</strong> course at ADA University.</p>
+                    <p>For more information, contact us at <a href="mailto:team33@ada.edu.az">team33@ada.edu.az</a></p>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

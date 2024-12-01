@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)2024 by Masud Eyubov, Natig Mammadov, Maharram Zeynalov, Fidan Akhundlu 
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html lang="en"> <!-- Added lang attribute for accessibility -->
+    <head>
+        <meta charset="UTF-8"> <!-- Specified character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added responsive design -->
+        <title>Homework 3: How Websites Work?</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script defer src="scripts.js"></script> <!-- Changed to defer for non-blocking behavior -->
+        <style>
+            /* Centering content and custom styles */
+            .welcome-section {
+                text-align: center;
+                padding: 50px 20px;
+                background-color: #f9f9f9;
+                border: 2px solid #ccc;
+                margin: 20px auto;
+                max-width: 800px;
+                border-radius: 10px;
+            }
+            .welcome-section h1 {
+                font-size: 2.5em;
+                color: #007bff; /* Team color accent */
+            }
+            .welcome-section p {
+                font-size: 1.2em;
+                color: #333;
+            }
+            .welcome-section button {
+                padding: 10px 20px;
+                font-size: 1em;
+                color: #fff;
+                background-color: #007bff; /* Matching button color */
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .welcome-section button:hover {
+                background-color: rgb(201, 58, 58); /* Hover effect */
+                box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+                transition: 0.5s ease;
+            }
+            #alertBanner {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #4CAF50; /* Green background */
+                color: white;
+                text-align: center;
+                padding: 15px;
+                font-size: 1.5em; /* Increased font size */
+                display: none; /* Hidden by default */
+                z-index: 1000; /* Ensure it's above other elements */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                animation: slideIn 1s ease-out; /* Added animation */
+            }
+
+            /* Animation for the banner */
+            @keyframes slideIn {
+                0% {
+                    top: -100px;
+                }
+                100% {
+                    top: 0;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html"><b>Home</b></a></li>                  <!-- Home Page -->
+                    <li><a href="code-artist.html"><b>Code Art</b></a></li>   <!-- Page about code artistry -->
+                    <li><a href="hour-of-code.html"><b>Hour Of Code</b></a></li>   <!-- Page about the Hour of Code -->
+                    <li><a href="web-project.html"><b>Web Project</b></a></li>     <!-- Page showcasing the web project -->
+                    <li><a href="team-members.html"><b>About Us</b></a></li>       <!-- Page introducing team members -->
+                </ul>
+                <h4 class="teamName"><b>Team 33</b></h4>
+            </nav>
+        </header>
+        <main>
+            <section class="welcome-section">
+                <h1>Welcome to New Yasamal Coders</h1>
+                <p>Explore our website and learn about our mission, projects, and team members.</p>
+                <button onclick="showAlert()">Greet Me</button> <!-- Added button to trigger greeting -->
+                <div id="alertBanner"></div>
+
+                <!-- Modified Button with Scroll Action -->
+                <button onclick="scrollToFeatures()">Features</button>
+
+                <!-- Add the following script to enable smooth scrolling to the 'Features' section -->
+                <script>
+                    function scrollToFeatures() {
+                        document.querySelector('.features-section').scrollIntoView({ behavior: 'smooth' });
+                    }
+                </script>
+            </section>
+            <img src="/media/yeniyasamakirpl (1) (1).png" alt="team-logo" id="team-logo" width="300px" height="300px">
+            <img src="/media/ada_logo_color.png" alt="ada-coloured-logo" id="ada-logo-colour">
+            <section class="team-photos">
+                <img src="/media/team33.jpg" alt="Team Photo 1" id="home-team-photo">
+                <img src="/media/HomePage1.jpg" alt="Team Photo 2" id="home-page-1">
+                <img src="/media/HomePage2.jpg" alt="Team Photo 3" id="home-page-2">
+                <img src="/media/HomePage3.jpg" alt="Team Photo 4" id="home-page-3">
+            </section>
+            <section class="mission-section" style="text-align: center; padding: 40px; background-color: #f4f4f9;">
+                <h2 style="font-size: 2em; color: #007bff;">Our Mission</h2>
+                <p style="font-size: 1.1em; color: #555; max-width: 600px; margin: 20px auto;">
+                    At New Yasamal Coders, we strive to innovate, collaborate, and create exceptional web experiences. Our mission is to bring technology and creativity together for meaningful impact.
+                </p>
+            </section>
+
+            <section class="features-section" style="text-align: center; padding: 40px 20px; background-color: #ffffff;">
+                <h2 style="font-size: 2em; color: #007bff;">What We Offer</h2>
+                <div class="features-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
+                    <div class="feature" style="max-width: 250px; background-color: #f0f0f0; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: #007bff;">Innovative Web Designs</h3>
+                        <p>Explore our creative and responsive web designs that adapt seamlessly to every device.</p>
+                    </div>
+                    <div class="feature" style="max-width: 250px; background-color: #f0f0f0; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: #007bff;">Collaborative Projects</h3>
+                        <p>We work as a team to deliver the best solutions, combining our strengths for impactful results.</p>
+                    </div>
+                    <div class="feature" style="max-width: 250px; background-color: #f0f0f0; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: #007bff;">Interactive Learning</h3>
+                        <p>Join us for interactive coding sessions like the Hour of Code, where you can learn alongside us.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials-section" style="text-align: center; padding: 40px 20px; background-color: #f9f9f9;">
+                <h2 style="font-size: 2em; color: #007bff;">What People Say</h2>
+                <div class="testimonials-container" style="display: flex; justify-content: space-around; gap: 40px; flex-wrap: wrap;">
+                    <div class="testimonial" style="max-width: 300px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <p>"This website is amazing! I learned so much from the Hour of Code."</p>
+                        <p><strong>- John Doe</strong></p>
+                    </div>
+                    <div class="testimonial" style="max-width: 300px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <p>"The project insights provided were extremely helpful in understanding modern web technologies."</p>
+                        <p><strong>- Jane Smith</strong></p>
+                    </div>
+                </div>
+            </section>
+            <section class="cta-section" style="text-align: center; padding: 40px 20px; background-color: #336178; color: white;">
+                <h2>Get Involved With Our Team</h2>
+                <p>Want to learn more or contribute to our projects? We’d love to collaborate with you!</p>
+                <button onclick="location.href='contact.html'" style="padding: 15px 30px; background-color: rgb(201, 58, 58); border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em;">
+                    Contact Us
+                </button>
+                <div class="footer-content">
+                    <p>&copy; 2024 Team 33. All rights reserved.</p>
+                    <p>Created as part of the <strong>SITE 1101: Principles of Information Systems</strong> course at ADA University.</p>
+                    <p>For more information, contact us at <a href="mailto:team33@ada.edu">team33@ada.edu.az</a></p>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="team-section" style="text-align: center; padding: 40px 20px; background-color: #f9f9f9;">
+                <h2 style="font-size: 2em; color: #007bff;">Meet the Team</h2>
+                <div class="team-container" style="display: flex; justify-content: space-around; gap: 30px; flex-wrap: wrap;">
+                    <div class="team-member" style="max-width: 250px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <img src="/media/Natiq exp-min.jpeg" alt="Team Member 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                        <h3 style="color: #007bff;">Natig Mammadov</h3>
+                        <p>Lead Developer and Project Manager. Passionate about coding and team collaboration.</p>
+                    </div>
+                    <div class="team-member" style="max-width: 250px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <img src="/media/Masud exp.jpeg" alt="Team Member 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                        <h3 style="color: #007bff;">Masud Eyubov</h3>
+                        <p>Designer and UX/UI Expert. Focused on creating beautiful and functional user experiences.</p>
+                    </div>
+                    <div class="team-member" style="max-width: 250px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <img src="/media/Fidan exp.jpeg" alt="Team Member 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                        <h3 style="color: #007bff;">Fidan Akhundlu</h3>
+                        <p>Front-end Developer. Expert in HTML, CSS, and JavaScript.</p>
+                    </div>
+                    <div class="team-member" style="max-width: 250px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <img src="/media/Maharram exp.jpeg" alt="Team Member 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                        <h3 style="color: #007bff;">Maharram Zeynalov</h3>
+                        <p>Back-end Developer. Skilled in server-side scripting and databases.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script>
+            // Function to display a dynamic greeting based on the time of day
+            function showAlert() 
+            {
+                const hours = new Date().getHours();
+                let greeting;
+                if (hours < 12) {
+                    greeting = "Good morning! Welcome to New Yasamal Coders' website!";
+                } else if (hours < 18) {
+                    greeting = "Good afternoon! Welcome to New Yasamal Coders' website!";
+                } else {
+                    greeting = "Good evening! Welcome to New Yasamal Coders' website!";
+                }
+
+                // Display the greeting in the alert banner
+                const alertBanner = document.getElementById("alertBanner");
+                alertBanner.innerHTML = greeting;
+                alertBanner.style.display = "block";
+
+                // Automatically hide the banner after 5 seconds
+                setTimeout(() => {
+                    alertBanner.style.display = "none";
+                }, 5000);
+            }
+        </script>
+    </body>
+</html>
